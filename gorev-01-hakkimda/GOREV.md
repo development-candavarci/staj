@@ -2,82 +2,63 @@
 
 **Sure:** ~30 dakika
 **Zorluk:** Baslangic
-**Araclar:** Next.js, Tailwind CSS, Claude Code, Git, Vercel
+**Araclar:** Claude Code, Git, Vercel (teknoloji secimi sana ait)
 
 ## Amac
 
-Kendini tanitan basit, sik bir web sayfasi yap ve canliya al. Bu gorev bitince linkini paylasacaksin — gercek bir proje gibi.
+Kendini tanitan bir web sayfasi yap ve canliya al. **Tasarim, icerik ve teknoloji secimi tamamen sana ait.** Bu gorev bitince linkini paylasacaksin — gercek bir proje gibi.
 
 ## Ne Yapacaksin?
 
-Bu klasorun icine (`gorev-01-hakkimda/`) Next.js projesi kur ve asagidaki bolumleri iceren tek sayfalik bir site olustur:
+Bu klasorun icine (`gorev-01-hakkimda/`) kendi "Hakkimda" sayfani yapacaksin.
 
-### Zorunlu Bolumler
+- **Neler koyacagina sen karar ver.** Isim, bio, skill'ler, projeler, hobi, foto, sosyal linkler... ne istersen.
+- **Nasil gorunecegine sen karar ver.** Renk, layout, font, minimal mi gosterisli mi — tercih senin.
+- **Hangi teknoloji ile yapacagina sen karar ver.** HTML + CSS yeter mi, Next.js mi kuracaksin, Tailwind mi kullanacaksin — arastir, karar ver.
 
-1. **Basligin** — Adin soyadin
-2. **Etiketin** — "Stajyer Gelistirici" veya kendini nasil tanimliyorsan
-3. **Kisa bio** — 2-3 cumle kendinden bahset
-4. **3 Ozellik/Skill** — Kart seklinde (ornek: "HTML/CSS", "Ogrenmeye acik", "Takim oyuncusu")
-5. **3 Sosyal Link** — LinkedIn, GitHub, Email (gercek linkler)
+**Onemli:** Bu bir test degil, seni tanima firsati. Sayfa SENI yansitmali.
 
-### Teknik Gereksinimler
+## Calisma Sekli
 
-- Next.js 15+ (App Router)
-- Tailwind CSS ile stillendirme
-- TypeScript
-- Mobile responsive (telefonda da duzgun gorunmeli)
-- `app/page.tsx` tek dosya yeterli, karmasiklastirma
-
-### Tasarim Ipuclari
-
-- Ferah bir layout (cok sikisik olmasin)
-- 1 veya 2 ana renk kullan (ornek: beyaz + mavi, veya siyah + turuncu)
-- Okunabilir font boyutu (basit tut)
-- Hover efektleri eklersen bonus
-- Kopyalama yapma: Dribbble'da 1-2 ornek bak, KENDI yorumunu kat
-
-## Adim Adim Rehber
-
-Eger takilirsan, Claude Code'a bu adimlari soyle:
-
-1. `gorev-01-hakkimda/` klasoru icinde Next.js projesi kur
-2. Tailwind kurulumunu kontrol et
-3. `app/page.tsx` dosyasini duzenle
-4. Yukaridaki 5 bolumu ekle
-5. `npm run dev` ile test et, tarayicida ac
-6. Begenmedigin yerleri Claude'a soyle, duzelt
-7. Git commit at
-8. GitHub'a push et
-9. Vercel'e deploy et
-10. Canli linki asagiya yapistir
+1. **Dusun:** Once 5 dakika dusun, ne gostermek istiyorsun? Kagit-kalem cizsen bile fayda var.
+2. **Claude ile konus:** Fikrini Claude'a anlat, birlikte nasil yapilacagina karar verin. Claude sana teknoloji onerir, sen karar verirsin.
+3. **Yap:** Kucuk adimlarla ilerle. Her adimi gor, test et.
+4. **Gozden gecir:** Begenmedigin yer varsa duzelt. Mukemmel olmak zorunda degil ama SENIN olmali.
+5. **Deploy et:** Vercel'e yukle. Claude sana nasil yapilacagini anlatir.
+6. **Paylas:** Canli linki bu dosyanin sonuna ekle.
 
 ## Done Kriteri (Bitti Sayilmasi Icin)
 
-- [ ] Next.js projesi `gorev-01-hakkimda/` klasorunde calisiyor
-- [ ] 5 zorunlu bolum sayfada gorunuyor
-- [ ] Mobile responsive (Chrome DevTools ile test et)
-- [ ] Git'e commit atildi
-- [ ] GitHub'a push edildi
-- [ ] Vercel'e deploy edildi, canli link calisiyor
+- [ ] Sayfa `gorev-01-hakkimda/` klasorunde
+- [ ] Tarayicida aciliyor ve duzgun gorunuyor
+- [ ] Telefonda da okunabiliyor (mobile responsive)
+- [ ] Git'e commit atildi, GitHub'a push edildi
+- [ ] Vercel'e (veya baska bir yere) deploy edildi, canli link calisiyor
 - [ ] Canli link bu dosyanin sonuna eklendi
-- [ ] "Ne Ogrendim" bolumu dolduruldu
+- [ ] "Kararlarim" ve "Ne Ogrendim" bolumleri dolduruldu
 
 ## Kurallar
 
-- **Claude ile birlikte yap** — ama sen yonet, Claude yapmasin
-- **Anladigin kodu commit et** — kopyala-yapistir degil
-- **30 dakikayi asarsa bitmeli** — mukemmel olmasi gerekmiyor, calisiyor olmasi yeterli
-- **Takilirsan sor** — Claude'a, sonra mentoruna
+- **Claude ile birlikte yap** — ama sen yonet, Claude yapmasin. Kararlar senin.
+- **Anladigin kodu commit et** — kopyala-yapistir degil. Her satirin ne ise yaradigini bil.
+- **30 dakikayi asarsa bitmeli** — mukemmel olmasi gerekmiyor, calisiyor ve SENIN olmasi yeterli.
+- **Takilirsan sor** — once Claude'a, sonra mentoruna.
+- **Kopyala-yapistir tasarim YOK** — ornek bakabilirsin ama aynisini yapma, kendi yorumunu kat.
 
 ## Canli Link
 
-<!-- Deploy bittikten sonra buraya Vercel linkini yapistir -->
+<!-- Deploy bittikten sonra buraya linki yapistir -->
 
-Ornek: `https://hakkimda-ahmet.vercel.app`
+## Kararlarim
+
+<!-- Bu sayfayi yaparken aldigin kararlari yaz: -->
+<!-- - Hangi teknolojiyi sectim ve neden? -->
+<!-- - Hangi renkleri/fontu sectim ve neden? -->
+<!-- - Neleri koymaya karar verdim, neleri koymadim? -->
 
 ## Ne Ogrendim
 
-<!-- Gorev bittikten sonra buraya 3-5 cumle yaz: -->
+<!-- Gorev bittikten sonra 3-5 cumle: -->
 <!-- - Ne yeni bir sey ogrendim? -->
 <!-- - Nerede takildim? -->
 <!-- - Claude ile calismak nasildi? -->
@@ -87,4 +68,6 @@ Ornek: `https://hakkimda-ahmet.vercel.app`
 
 **Ipucu:** Claude'a ilk promptun soyle olabilir:
 
-> Merhaba Claude, `gorev-01-hakkimda/` klasoru icinde Next.js 15 + TypeScript + Tailwind ile yeni bir proje kurmak istiyorum. Bana komutu ver, sonra `app/page.tsx` dosyasinda "Hakkimda" sayfasi yapacagiz. Adim adim ilerleyelim.
+> Merhaba Claude, kendim icin bir "Hakkimda" sayfasi yapmak istiyorum. Sifirdan baslayacagim. Bana once birkac soru sor (hangi teknoloji, neler koymak istiyorum, nasil bir stil vs.) sonra birlikte adim adim yapalim.
+
+**Unutma:** Claude sana "ne yapayim?" diye sormazsa, SEN ona "bana su soruyu sor" de. Sen yoneticisin.
