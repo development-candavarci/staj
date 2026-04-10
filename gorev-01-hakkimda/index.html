@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakan · Hakkımda</title>
+  <meta name="description" content="Hakan — 28 yaşında, Adana'dan. Hem hizmet sektörüyle hem de yazılım işleriyle ilgilendi.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --bg-soft: #efe7d8;
+      --bg-card: #f1ead9;
+      --ink: #1b1813;
+      --ink-soft: #55493c;
+      --ink-mute: #8a7d6c;
+      --accent: #b8553a;
+      --accent-deep: #8e3d26;
+      --accent-soft: #e9cbb5;
+      --line: rgba(27, 24, 19, 0.12);
+      --line-soft: rgba(27, 24, 19, 0.06);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(184, 85, 58, 0.055) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(142, 61, 38, 0.045) 0%, transparent 42%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='2' cy='2' r='0.55' fill='%231b1813' opacity='0.09'/></svg>");
+      background-size: 22px 22px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      padding: 2.25rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .brand em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+      margin-right: 0.45rem;
+    }
+
+    .nav-meta {
+      font-size: 0.72rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 6rem 0 5rem;
+      position: relative;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-label::before {
+      content: '';
+      width: 2.4rem;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: clamp(2.75rem, 7.5vw, 5.25rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 2.25rem;
+      max-width: 16ch;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .hero-intro {
+      font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+      color: var(--ink-soft);
+      max-width: 38rem;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 3.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+
+    .hero-meta > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .hero-meta .k {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--ink-mute);
+      font-weight: 600;
+    }
+
+    .hero-meta .v {
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .divider {
+      display: flex;
+      justify-content: center;
+      padding: 2.5rem 0;
+    }
+
+    .divider::after {
+      content: '';
+      width: 1px;
+      height: 5rem;
+      background: linear-gradient(to bottom, transparent, var(--line), transparent);
+    }
+
+    .about {
+      padding: 4rem 0;
+      position: relative;
+    }
+
+    .age-mark {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(13rem, 32vw, 26rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--accent);
+      opacity: 0.055;
+      line-height: 0.85;
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--ink-mute);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 1.75rem;
+      height: 1px;
+      background: var(--ink-mute);
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 4vw, 2.95rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+      max-width: 18ch;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 300;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      line-height: 1.85;
+      max-width: 38rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dual {
+      padding: 5rem 0 7rem;
+    }
+
+    .dual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      margin-top: 3rem;
+    }
+
+    .dual-card {
+      background: var(--bg-card);
+      padding: 3rem 2.5rem 2.75rem;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid var(--line);
+    }
+
+    .dual-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: var(--accent);
+      transition: width 0.4s ease;
+    }
+
+    .dual-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(27, 24, 19, 0.07);
+    }
+
+    .dual-card:hover::before {
+      width: 3px;
+    }
+
+    .dual-card .num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 2.9rem;
+      font-weight: 300;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      display: block;
+      letter-spacing: -0.02em;
+    }
+
+    .dual-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.015em;
+    }
+
+    .dual-card p {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      line-height: 1.75;
+    }
+
+    footer {
+      padding: 3rem 0 4rem;
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-mark {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .footer-mark em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+      margin-right: 0.4rem;
+    }
+
+    .footer-meta {
+      font-size: 0.72rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    @media (max-width: 720px) {
+      .container { padding: 0 1.5rem; }
+      nav { padding: 1.75rem 0; }
+      .nav-meta { font-size: 0.65rem; }
+      .hero { padding: 4rem 0 3rem; }
+      .hero-label { margin-bottom: 1.75rem; }
+      .hero h1 { margin-bottom: 1.75rem; }
+      .hero-meta {
+        gap: 1.75rem;
+        margin-top: 2.75rem;
+      }
+      .about { padding: 3rem 0; }
+      .age-mark { right: -3rem; opacity: 0.04; }
+      .dual { padding: 3rem 0 5rem; }
+      .dual-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .dual-card { padding: 2.25rem 1.75rem 2rem; }
+      .dual-card .num { font-size: 2.4rem; margin-bottom: 1.25rem; }
+      .dual-card h3 { font-size: 1.55rem; }
+      footer { padding: 2.5rem 0 3rem; }
+      .footer-inner {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="brand"><em>—</em>Hakan</div>
+      <div class="nav-meta">Hakkımda</div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-label">Merhaba</div>
+      <h1>Ben <em>Hakan</em>, Adana'dan.</h1>
+      <p class="hero-intro">
+        28 yaşındayım ve Adana'da yaşıyorum. Hem hizmet sektörüyle hem de
+        yazılım işleriyle ilgilendim — iki farklı dünyanın kendine özgü
+        dili var, ben de her ikisini de tanıma fırsatı buldum.
+      </p>
+
+      <div class="hero-meta">
+        <div>
+          <span class="k">Yaş</span>
+          <span class="v">28</span>
+        </div>
+        <div>
+          <span class="k">Şehir</span>
+          <span class="v">Adana</span>
+        </div>
+        <div>
+          <span class="k">Alan</span>
+          <span class="v">Hizmet &amp; Yazılım</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="about">
+      <div class="age-mark" aria-hidden="true">28</div>
+      <div class="section-label">Kısaca</div>
+      <h2 class="section-title">İki farklı alanın <em>izinde.</em></h2>
+      <p>
+        Adana'da yaşıyorum ve 28 yaşındayım. Çalışma hayatımda iki farklı
+        alanla ilgilendim: hizmet sektörü ve yazılım. Birbirinden oldukça
+        farklı iki dünya, ama her biriyle kendi koşullarında yakından
+        ilgilenme imkânı buldum.
+      </p>
+    </section>
+
+    <section class="dual">
+      <div class="section-label">Geçmiş</div>
+      <h2 class="section-title">İlgilendiğim <em>alanlar</em></h2>
+
+      <div class="dual-grid">
+        <article class="dual-card">
+          <span class="num">01</span>
+          <h3>Hizmet Sektörü</h3>
+          <p>
+            Çalışma hayatımda hizmet sektörüyle ilgilendim. Bu alan, iş
+            deneyimimin önemli bir parçası oldu.
+          </p>
+        </article>
+
+        <article class="dual-card">
+          <span class="num">02</span>
+          <h3>Yazılım</h3>
+          <p>
+            Yazılım işleriyle de ilgilendim. Teknolojiye yakın durmak ve
+            bu alanda zaman geçirmek, ilgimi koruduğum bir diğer yön.
+          </p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-mark"><em>—</em>Hakan</div>
+        <div class="footer-meta">Adana · 2026</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
