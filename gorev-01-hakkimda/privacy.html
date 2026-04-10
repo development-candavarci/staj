@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>Gizlilik Politikası · Hakan — Adana</title>
+  <meta name="description" content="Hakan kişisel tanıtım sayfası — gizlilik politikası ve KVKK aydınlatma metni.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --bg-soft: #efe7d8;
+      --bg-card: #f1ead9;
+      --ink: #1b1813;
+      --ink-soft: #55493c;
+      --ink-mute: #8a7d6c;
+      --ink-invert: #f6f1e8;
+      --accent: #b8553a;
+      --accent-deep: #8e3d26;
+      --line: rgba(27, 24, 19, 0.14);
+      --line-soft: rgba(27, 24, 19, 0.06);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(184, 85, 58, 0.055) 0%, transparent 42%),
+        radial-gradient(circle at 88% 82%, rgba(142, 61, 38, 0.045) 0%, transparent 44%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><circle cx='2' cy='2' r='0.55' fill='%231b1813' opacity='0.1'/></svg>");
+      background-size: 22px 22px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- NAV ---------- */
+    header.site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(246, 241, 232, 0.88);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.05rem;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .brand .mark {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .back-link {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ink-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    .back-link svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* ---------- HEADER ---------- */
+    .page-header {
+      padding: 5rem 0 3rem;
+      position: relative;
+    }
+
+    .micro-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .micro-label::before {
+      content: '';
+      width: 2.4rem;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .page-header h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      max-width: 22ch;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .page-header p.lead {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      max-width: 38rem;
+    }
+
+    .meta-line {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      font-weight: 500;
+    }
+
+    .meta-line strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- CONTENT ---------- */
+    main.policy {
+      padding: 2rem 0 5rem;
+    }
+
+    .policy-card {
+      background: var(--bg-card);
+      padding: 3rem 3rem 2.5rem;
+      border: 1px solid var(--line);
+      box-shadow:
+        inset 0 0 0 1px var(--bg),
+        inset 0 0 0 2px var(--line-soft);
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .policy-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .policy-card h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.015em;
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .policy-card h2 .num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .policy-card p {
+      font-size: 0.98rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .policy-card p:last-child { margin-bottom: 0; }
+
+    .policy-card ul {
+      list-style: none;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .policy-card ul li {
+      font-size: 0.96rem;
+      color: var(--ink-soft);
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .policy-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .policy-card a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer.site-footer {
+      padding: 3rem 0;
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-mark {
+      font-family: 'Fraunces', serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .footer-mark em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+      margin-right: 0.35rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      font-weight: 500;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 720px) {
+      .container { padding: 0 1.5rem; }
+      .nav-inner { padding: 1rem 1.5rem; }
+      .page-header { padding: 3.5rem 0 2.5rem; }
+      main.policy { padding: 1.5rem 0 3.5rem; }
+      .policy-card { padding: 2rem 1.75rem 1.75rem; }
+      .policy-card h2 { font-size: 1.3rem; flex-direction: column; gap: 0.35rem; align-items: flex-start; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand" aria-label="Hakan — Ana sayfa">
+        <span class="mark">—</span>
+        <span>Hakan</span>
+      </a>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        Ana Sayfa
+      </a>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="micro-label">Yasal Bilgilendirme</div>
+      <h1>Gizlilik <em>Politikası</em> ve KVKK Aydınlatma Metni</h1>
+      <p class="lead">
+        Bu sayfa, Hakan'a ait kişisel freelance tanıtım sitesinin ziyaretçilerine
+        yönelik gizlilik bilgilendirmesini içerir. Sitede ziyaretçi davranışı
+        izlenmez, form yoluyla kişisel veri toplanmaz.
+      </p>
+      <div class="meta-line">
+        <div><strong>Son güncelleme:</strong> Nisan 2026</div>
+        <div><strong>Yürürlük:</strong> Yayın tarihinden itibaren</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="policy">
+    <div class="container">
+
+      <article class="policy-card">
+        <h2><span class="num">01</span>Veri Sorumlusu</h2>
+        <p>
+          Bu web sitesinin sahibi ve veri sorumlusu, Adana'da freelance olarak
+          çalışan <strong>Hakan</strong>'dır. Site, kişisel tanıtım ve freelance
+          hizmet sunumu amacıyla yayınlanmaktadır.
+        </p>
+        <p>
+          İletişim için:
+          <a href="mailto:iletisim@hakan.com.tr">iletisim@hakan.com.tr</a>
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2><span class="num">02</span>Toplanan Kişisel Veriler</h2>
+        <p>
+          Bu web sitesi, ziyaretçilerden doğrudan kişisel veri toplamamaktadır.
+          Sitede herhangi bir iletişim formu, hesap oluşturma, yorum bölümü veya
+          kullanıcı kaydı bulunmamaktadır.
+        </p>
+        <p>
+          Ziyaretçi ile iletişim, yalnızca sayfada yer alan e-posta bağlantısı
+          üzerinden gerçekleşir. Bu bağlantıya tıklayarak e-posta gönderen
+          ziyaretçi, kendi rızasıyla adı ve e-posta adresi gibi bilgilerini
+          paylaşmış olur.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2><span class="num">03</span>Çerezler ve Üçüncü Taraf Hizmetler</h2>
+        <p>
+          Site, performans ve tipografi için Google Fonts servisini kullanır.
+          Bu hizmet, teknik zorunluluk gereği ziyaretçinin IP adresini Google'a
+          iletebilir. Google Fonts kullanım koşulları ve gizlilik politikası
+          Google tarafından ayrıca yayınlanmaktadır.
+        </p>
+        <p>
+          Bunun dışında site, tanıtım amaçlı çerez, reklam çerezi veya üçüncü
+          taraf analiz aracı kullanmamaktadır.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2><span class="num">04</span>KVKK Kapsamında Haklarınız</h2>
+        <p>
+          6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) 11. madde
+          kapsamında, kişisel verilerinize ilişkin aşağıdaki haklara sahipsiniz:
+        </p>
+        <ul>
+          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+          <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+          <li>İşlenme amacını ve bu amaca uygun kullanılıp kullanılmadığını öğrenme</li>
+          <li>Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme</li>
+          <li>KVKK'nın öngördüğü şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
+          <li>İşlenen verilerin üçüncü kişilere aktarılıp aktarılmadığını öğrenme</li>
+        </ul>
+        <p>
+          Bu haklarınızı kullanmak için
+          <a href="mailto:iletisim@hakan.com.tr">iletisim@hakan.com.tr</a>
+          adresinden iletişime geçebilirsiniz. Talebiniz en kısa sürede
+          değerlendirilecek ve yasal süreler içinde yanıtlanacaktır.
+        </p>
+      </article>
+
+      <article class="policy-card">
+        <h2><span class="num">05</span>Güncellemeler</h2>
+        <p>
+          Bu gizlilik politikası, yasal gereklilikler veya sitenin işleyişindeki
+          değişikliklere bağlı olarak zaman zaman güncellenebilir. Güncel metin
+          her zaman bu sayfada yayınlanır ve son güncelleme tarihi sayfa başında
+          belirtilir.
+        </p>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-mark"><em>—</em>Hakan · Adana · 2026</div>
+        <nav class="footer-links" aria-label="Alt bilgi menüsü">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="mailto:iletisim@hakan.com.tr">E-posta</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
